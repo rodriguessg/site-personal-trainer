@@ -1,0 +1,789 @@
+/* styles.css */
+
+
+:root {
+
+    --cor-principal: #ffffff;
+
+    --cor-1:#131313;
+  --cor-2:#3F3E3E;
+  --cor-3:#FEF5E3;
+  --cor-4: #00509E;
+  --titulo: "Aeriast";
+  --texto:"Montserrat", sans-serif;
+}
+
+
+a {
+    color: #00509E; /* Azul Médio */
+}
+
+a:hover {
+    color: #66B2FF; /* Azul Claro */
+}
+
+button {
+    background-color: #00509E; /* Azul Médio */
+    color: #ffffff; /* Branco */
+}
+
+button:hover {
+    background-color: #66B2FF; /* Azul Claro */
+}
+
+.card {
+    background-color: #F4F4F4; /* Cinza Claro */
+  
+}
+
+header, footer {
+    background-color: #003366; /* Azul Escuro */
+    color: #ffffff; /* Branco */
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: auto;
+    background-color: #003366; /* Azul Escuro */
+    color: #000000; /* Preto */
+}
+
+.menu {
+    background: linear-gradient(to left, #007bff, #ffffff); /* Gradiente de azul para branco */
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Usa flexbox para alinhar os itens na horizontal */
+}
+
+.menu ul li {
+    margin: 0;
+}
+
+.menu ul li a {
+    display: block;
+    color: rgb(7, 7, 7);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.menu ul li a:hover {
+    color: var(--cor-principal);
+    background-color:#575757;
+}
+
+
+.menu-hamburguer {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Seção Personal Trainer */
+.personal-trainer {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens sejam movidos para uma nova linha em telas menores */
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.personal-trainer .trainer-info,
+.personal-trainer .trainer-photo {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    max-width: 500px; /* Limita a largura máxima para telas maiores */
+}
+
+.personal-trainer .trainer-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Seção Missão, Visão e Valores */
+.mission-vision-values {
+    display: flex;
+    flex-wrap: wrap; /* Torna a linha flexível para dispositivos móveis */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    margin: 10px; /* Adiciona espaço entre os cards em telas menores */
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.card-front {
+    background-color: #007bff;
+    color: white;
+}
+
+.card-back {
+    background-color: white;
+    color: black;
+    transform: rotateY(180deg);
+    border: 1px solid #ddd;
+}
+
+.icon-placeholder {
+    width: 50px;
+    height: 50px;
+    /* background-color: #fff; */
+    border-radius: 50%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon {
+    width: 64px;
+}
+
+
+/* Seção de Perfil do Personal Trainer */
+.trainer-profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+    flex-wrap: wrap; /* Flexibilidade para dispositivos móveis */
+}
+
+.trainer-text, .trainer-photo-right {
+    flex: 1;
+    margin: 20px;
+    max-width: 500px; /* Limita a largura máxima para telas maiores */
+    text-align: left;
+}
+
+.trainer-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.trainer-text p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.trainer-photo-right img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+/* informações do trabalho  */
+
+/* Seção de Serviços */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+
+.service-item {
+    flex: 1;
+    margin: 20px;
+    max-width: 300px; /* Limita a largura máxima para telas maiores */
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: white;
+}
+
+.service-item img {
+    width: 200px; /* Ajuste o tamanho das imagens conforme necessário */
+    height: auto;
+    border-radius: 20%;
+    margin-bottom: 10px;
+}
+.foto-mapa {
+    width: 10px;
+}
+
+.service-item h3 {
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Seção Tipo de Atendimento */
+.type-of-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    background-color: #f4f4f4;
+}
+
+.service-info {
+    max-width: 800px; /* Limita a largura máxima do conteúdo */
+    text-align: center;
+}
+
+.service-info h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Estilo para o Botão de Contato */
+.contact-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha o botão à direita */
+    margin-left: 20px; /* Espaçamento entre o texto e o botão */
+    cursor: pointer;
+}
+
+.contact-button a {
+    display: flex;
+    align-items: center;
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.contact-button img {
+    width: 24px; /* Ajusta o tamanho do ícone */
+    height: auto;
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+}
+
+.contact-button span {
+    display: inline-block;
+}
+
+/* Estilo para o Footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: left; /* Alinha o texto e os ícones à esquerda */
+}
+
+.social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espaço entre os ícones */
+}
+
+.social-icon {
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para a transformação */
+}
+
+.social-icon img {
+    width: 24px; /* Tamanho dos ícones */
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease; /* Adiciona uma transição suave para o aumento */
+}
+
+/* Efeito de animação ao passar o mouse */
+.social-icon:hover img {
+    transform: scale(1.2); /* Aumenta o tamanho do ícone em 20% */
+}
+.duvidas{
+    background-color: var(--cor-2);
+    color: var(--cor-3);
+    font-family: var(--texto);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 30rem;
+  }
+  .duvidas-texto h1{
+    font-size: 2.5rem;
+  }
+  .duvidas-texto p{
+    margin-top: 10px;
+    font-size: 1.8rem;
+    width: 40rem;
+    margin-right: 3.5rem;
+  }
+  .duvidas-formulario form{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  }
+  .duvidas-formulario{
+    width: 340px;
+    height: 380px;
+    background-color: var(--cor-4);
+    padding: 20px;
+    border-radius: 12px;
+    border:1px solid rgba(255, 255, 255,0.5);
+    filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.2));
+  }
+  form{
+    margin-top: 20px;
+  }
+  input, textarea{
+  background-color: #ffff;
+  border-radius: 5px;
+  border-color:rgba(254, 245, 227,0.2);
+  filter: drop-shadow(4px 4px 4px rgba(18, 17, 17, 0.2));
+  margin-top: 10px;
+  display: flex;
+  align-self: center;
+  font-family: var(--texto);
+  }
+  input{
+    width: 300px;
+    height: 30px;
+  }
+  textarea{
+    width: 300px;
+    height: 100px;
+  }
+  .input::placeholder {
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 1rem;
+  }
+  .duvidas-formulario h1{
+   font-size: 1.3rem;
+   text-align: center;
+   margin-top: 20px;
+  }
+  .enviar{
+    width: 200px;
+    height: 30px;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 6px;
+  background-color: #ffffff;
+  color: var(--cor-4);
+  font-family: var(--texto);
+  font-weight: 500;
+  border-color:rgba(254, 245, 227,0.2);
+  filter: drop-shadow(4px 4px 4px rgba(18, 17, 17, 0.2));
+  }
+  .enviar:hover{
+  background-color: var(--cor-2);
+  color: var(--cor-3);
+  }
+
+  .footer-bg{
+    background-color: var(--cor-1);
+    color: var(--cor-3);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20rem;
+  }
+  .footertexto{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  }
+  .footer-logo{
+   width: 245px; 
+   height: 120px;
+  }
+  .footertexto p{
+    font-family: var(--texto);
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .email{
+    font-family: var(--texto);
+    color: var(--cor-3);
+  }
+  .footer-redes {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .footer-redes a:hover{ 
+    transform: translatey(30%);
+    transition: all 0.5s;
+  }
+  .footer-endereco{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+  .endereco{
+    font-family: var(--texto);
+    font-size: 1.5rem;
+  }
+  .verrota{
+    background-color: var(--cor-4);
+  border: 2px solid var(--cor-4);
+  border-radius: 4px;
+  margin-top: 1rem;
+  width: 8rem;
+  padding: 6px;
+  }
+  
+  .verrota a{
+    color: var(--cor-3);
+  }
+  .verrota:hover{
+    background-color: var(--cor-3);
+  
+  }
+  .verrota a:hover{
+  color: var(--cor-4);
+  }
+  .copy{
+  font-family: var(--texto);
+  background-color: var(--cor-4);
+  text-align: center;
+  }
+  .footer-copy{
+    color: var(--cor-1);
+    font-size: 0.8rem;
+  }
+  .footer-copy:hover{
+    color: var(--cor-3);
+  }
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .menu ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 50px;
+        left: 0;
+    }
+
+    .menu ul.show {
+        display: flex;
+    }
+
+    .menu-hamburguer {
+        display: block;
+    }
+
+    .personal-trainer {
+        flex-direction: column; /* Coloca itens em uma coluna para dispositivos móveis */
+        padding: 20px;
+        text-align: center; /* Centraliza o texto nos dispositivos móveis */
+    }
+
+    .personal-trainer .trainer-info,
+    .personal-trainer .trainer-photo {
+        max-width: 100%;
+    }
+
+    .mission-vision-values {
+        flex-direction: column;
+        align-items: center; /* Centraliza os cards verticalmente */
+        padding: 20px;
+        text-align: center; /* Centraliza o texto nos dispositivos móveis */
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+    }
+/* informações personal */
+    .trainer-profile {
+        flex-direction: column; /* Coloca itens em uma coluna para dispositivos móveis */
+        padding: 20px;
+        text-align: center; /* Centraliza o texto nos dispositivos móveis */
+    }
+
+    .trainer-text, .trainer-photo-right {
+        max-width: 100%;
+        text-align: center; /* Centraliza o texto e imagem em dispositivos móveis */
+    }
+
+    .trainer-text h2 {
+        font-size: 20px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    .trainer-text p {
+        font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+
+    /* responsividade sobre trabalho */
+
+    .services {
+        padding: 20px;
+    }
+
+    .service-item {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .service-item img {
+        width: 80px; /* Ajusta o tamanho das imagens para dispositivos móveis */
+    }
+
+    .service-item h3 {
+        font-size: 18px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    .service-item p {
+        font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+    /* tipo de atendimento */
+    .type-of-service {
+        padding: 20px;
+    }
+
+    .service-info h2 {
+        font-size: 24px; /* Ajusta o tamanho do título para dispositivos menores */
+    }
+
+    .service-info p {
+        font-size: 16px; /* Ajusta o tamanho da fonte para dispositivos menores */
+    }
+
+    .contact-button {
+        margin-left: 0;
+        justify-content: center; /* Centraliza o botão em telas menores */
+        margin-top: 20px;
+    }
+
+    .contact-button a {
+        font-size: 14px; /* Ajusta o tamanho da fonte para dispositivos menores */
+        padding: 10px; /* Ajusta o padding para dispositivos menores */
+        border-radius: 50%; /* Torna o botão circular */
+        width: 60px; /* Define a largura do botão */
+        height: 60px; /* Define a altura do botão */
+        text-align: center; /* Centraliza o texto dentro do botão */
+        overflow: hidden; /* Garante que o conteúdo não ultrapasse o botão circular */
+    }
+
+    .contact-button img {
+        width: 30px; /* Ajusta o tamanho do ícone para dispositivos menores */
+        margin-right: 0; /* Remove o espaçamento à direita do ícone */
+    }
+
+    .contact-button span {
+        display: none; /* Oculta o texto em telas menores para se ajustar ao formato circular */
+    }
+      .social-media {
+        justify-content: center; /* Centraliza os ícones em telas menores */
+        gap: 10px; /* Ajusta o espaço entre os ícones para telas menores */
+    }
+
+    .social-icon img {
+        width: 20px; /* Ajusta o tamanho dos ícones para telas menores */
+    }
+    .contact-form-section {
+        flex-direction: column;
+        align-items: center; /* Centraliza o texto e o formulário */
+    }
+
+    .form-text {
+        max-width: 100%;
+        text-align: center; /* Centraliza o texto em telas menores */
+        margin-bottom: 20px;
+    }
+
+    .form-content {
+        max-width: 100%; /* O formulário ocupa toda a largura disponível */
+        justify-content: center; /* Centraliza o formulário */
+    }
+    .duvidas{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: center;
+    align-items: center;
+      }
+      .duvidas-texto h1{
+        font-size: 2rem;
+      margin-left: 15rem;
+        margin-top: 2rem;
+      }
+      .duvidas-texto p{
+        font-size: 1.5rem; 
+        width: 35rem; 
+        margin-left: 10rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+      }
+      .duvidas-formulario{
+        margin-bottom: 2rem;
+      }
+    
+}
+
+@media (max-width: 480px) {
+    .personal-trainer,
+    .mission-vision-values {
+        padding: 10px;
+    }
+
+    .card {
+        max-width: 100%;
+    }
+/* informações personal */
+    .trainer-info, .trainer-photo {
+        padding: 0 10px;
+    }
+    .trainer-profile {
+        padding: 10px;
+    }
+
+    .trainer-text p {
+        padding: 0 10px; /* Reduz o padding lateral em telas muito pequenas */
+    }
+
+
+    .services {
+        padding: 10px;
+    }
+
+    .service-item img {
+        width: 60px; /* Ajusta o tamanho das imagens para telas muito pequenas */
+    }
+
+    .service-item h3 {
+        font-size: 16px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+    .service-item p {
+        font-size: 12px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+
+    /* tipo de atendimento */
+
+    .type-of-service {
+        padding: 10px;
+    }
+
+    .service-info h2 {
+        font-size: 20px; /* Ajusta o tamanho do título para telas muito pequenas */
+    }
+
+    .service-info p {
+        font-size: 14px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+    }
+
+    .contact-button a {
+        font-size: 12px; /* Ajusta o tamanho da fonte para telas muito pequenas */
+        width: 50px; /* Ajusta a largura do botão para telas muito pequenas */
+        height: 50px; /* Ajusta a altura do botão para telas muito pequenas */
+    }
+
+    .contact-button img {
+        width: 50px; /* Ajusta o tamanho do ícone para telas muito pequenas */
+    }
+    .social-icon img {
+        width: 18px; /* Ajusta ainda mais o tamanho dos ícones para telas muito pequenas */
+    }
+
+    .form-content {
+        display: none; /* Esconde o formulário em telas muito pequenas */
+    }
+    .duvidas{
+        display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+     justify-content: center;
+       }
+     
+       .duvidas-texto h1{
+         margin-top: 10px;
+         font-size: 1.6rem;
+         width: 20rem;
+         margin-left: 5rem;
+         margin-top: 25px;
+       }
+       .duvidas-texto p{
+         margin-top: 10px;
+         font-size: 1.2rem;
+         width: 20rem;
+         margin-left: 5rem;
+       }
+       .duvidas-formulario{
+         width: 300px;
+         height: 360px;
+         margin-top: 25px;
+         margin-bottom: 20px;
+       }
+     .duvidas-formulario h1{
+       margin-top: 10px;
+       font-size: 1rem;
+     }
+     .footer-bg{
+       display: flex;
+       flex-direction: column;
+       height: 40rem;
+     }
+}
